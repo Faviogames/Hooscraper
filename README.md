@@ -23,8 +23,7 @@ Está diseñado para funcionar con **Selenium** y **Chrome WebDriver** de forma 
 - **Python 3.8+**
 - Google Chrome instalado.
 - Paquetes de Python (instalar con `pip install -r requirements.txt`)
-
-- ```bash
+  
 selenium
 webdriver-manager
 ⚙️ Configuración (config.py)
@@ -40,10 +39,6 @@ PREDEFINED_STAT_CATEGORIES_ORDER → Lista de estadísticas que se extraerán po
 
 🚀 Uso
 Ejecutar el script desde la terminal:
-
-bash
-Copiar
-Editar
 python scraper.py --url "<URL_LIGA>" [opciones]
 Parámetros disponibles
 Parámetro	Requerido	Descripción
@@ -54,37 +49,23 @@ Parámetro	Requerido	Descripción
 
 📄 Ejemplos de uso
 Extraer todos los partidos de una temporada
-bash
-Copiar
-Editar
-python scraper.py --url "https://www.flashscore.com/basketball/usa/nba-2024-2025/"
+`python scraper.py --url "https://www.flashscore.com/basketball/usa/nba/`
 Extraer solo los últimos 10 partidos y guardar con nombre personalizado
-bash
-Copiar
-Editar
-python scraper.py --url "https://www.flashscore.com/basketball/spain/acb-2024-2025/" --last 10 --output acb_ultimos10
+`python scraper.py --url "https://www.flashscore.com/basketball/spain/acb/" --last 10 --output acb_ultimos10`
 Ejecutar con navegador visible
-bash
-Copiar
-Editar
-python scraper.py --url "https://www.flashscore.com/basketball/usa/nba-2024-2025/" --no-headless
+`python scraper.py --url "https://www.flashscore.com/basketball/usa/nba-2024-2025/" --no-headless`
 
 📂 Estructura del proyecto
-bash
-Copiar
-Editar
-.
+`
 ├── scraper.py          # Script principal
 ├── config.py           # Configuración
 ├── output/             # Carpeta de resultados en JSON
 ├── backups/            # Carpeta de copias de seguridad
 ├── requirements.txt    # Dependencias
-└── README.md           # Documentación
+└── README.md           # Documentación`
 
 📤 Salida (Ejemplo JSON)
-json
-Copiar
-Editar
+`json
 [
     {
         "match_id": "123abc",
@@ -108,4 +89,4 @@ Editar
         },
         "scraped_at": "2025-01-13T15:45:00"
     }
-]
+]`
